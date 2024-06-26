@@ -16,11 +16,13 @@ const Vomp = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      console.log(currentUser);
-      setLoading(false);
-    });
+    if (auth) {
+      onAuthStateChanged(auth, (currentUser) => {
+        setUser(currentUser);
+        console.log(currentUser);
+        setLoading(false);
+      });
+    }
   }, []);
 
   const handleLogin = async (provider) => {

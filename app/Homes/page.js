@@ -59,7 +59,7 @@ const YourComponent = (params) => {
 
   return (
     <div>
-      <div>{user.displayName}</div>
+      <div>{user && user.displayName}</div>
       <div>{imageUrl && <img src={imageUrl} alt="Uploaded" width="100" />}</div>
       <input
         type="text"
