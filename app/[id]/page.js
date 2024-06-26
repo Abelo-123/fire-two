@@ -21,15 +21,15 @@ export default function SeeId({ params }) {
       //   }));
       //setData(nd);
     });
-  }, []);
+  }, [id]);
   return (
     <>
       <h1>{id}</h1>
 
       <h2>{name && name}</h2>
       <div>
-        {data.map((items) => (
-          <div>{items.Name}</div>
+        {data.map((item, index) => (
+          <div key={index}>{item.Name}</div>
         ))}
       </div>
     </>
