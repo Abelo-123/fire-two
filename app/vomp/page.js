@@ -11,7 +11,7 @@ import { database } from "../firebase";
 import { ref, set } from "firebase/database";
 import Homes from "../Homes/page";
 
-const page = () => {
+const Vomp = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -62,4 +62,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Vomp;

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { onValue, ref } from "firebase/database";
 import { database } from "../firebase";
-export default function Page({ params }) {
+export default function SeeId({ params }) {
   const { id } = params;
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
